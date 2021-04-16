@@ -95,23 +95,28 @@ session_start();
         $result = mysqli_query($con, $query);
         echo '
         <div class="box">
-            <div>
+            <div style="text-align: center">
                 <img src="img/medbase.png" alt="" class="title_header">
-                <table>
+                <h3> Gestione Reparti</h3>
+            </div>
+            <div style="margin-bottom: 2%">
+                <table class="DefaultTable">
                     <tr>
-                        <td>Nome Reparto</td>
-                        <td>Posti disponibili</td>
+                        <td class="table_header" style="border-right: none">Nome Reparto</td>
+                        <td class="table_header" style="border-left: none">Posti disponibili</td>
                     </tr>';
                     while($row = $result->fetch_object()){
                         echo " 
                         <tr>
-                            <td>$row->nomeR</td>
-                            <td>$row->MaxPosti</td>
+                            <td class='table_content' style='border-left: 2px solid #150C25'>$row->nomeR</td>
+                            <td class='table_content' style='border-right: 2px solid #150C25'>$row->MaxPosti</td>
+                            <td style='background-color: #4C258F'><button class='edit_button'>Modifica</button></td>
                         </tr>";
                     } echo'                    
                 </table>
             </div>
         </div>';
+
     }
     else echo "
                  <div class='login_error_box'>  

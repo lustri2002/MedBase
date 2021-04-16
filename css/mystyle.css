@@ -55,10 +55,6 @@ body{
     text-align: center;
 }
 
-.box{
-    background-color: #4C258F;
-}
-
 input[type="submit"]{
     background-color: #006AB3;
     border-radius: 10px;
@@ -282,9 +278,41 @@ span.psw {
     width: 50%;
     text-align: center;
     border-radius: 20px;
+    background-color: #4C258F;
+    height: fit-content !important;
 }
 
 .title_header{
     width: 25%;
     margin: 2%;
+}
+.DefaultTable{
+    font-size: 20px;
+    margin: 2% auto;
+    margin-bottom: 2%;
+}
+.table_header{
+    background-color: #006AB3;
+    width: fit-content;
+    padding: 15px;
+    border: 2px solid #150C25;
+}
+
+.table_content{
+    padding: 10px;
+    border-bottom: 2px solid #150C25;
+}
+
+.edit_button{
+    margin-left: 10%;
+    border-radius: 20px;
+
+}
+
+tr:nth-child(even){
+    background-color: #602EB5;
+}
+
+tr:nth-child(odd){
+    background-color: #30175C;
 }
