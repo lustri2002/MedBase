@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generato da Microsoft Visio, esportazione SVG DiagrammaDEF.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.6929in" height="8.26772in"
+		viewBox="0 0 841.89 595.276" xml:space="preserve" color-interpolation-filters="sRGB" class="st12">
+	<v:documentProperties v:langID="1040" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:prompt="" v:val="VT0(0):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#dcdae4;stroke:#4c268e;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#4b268d;font-family:Calibri;font-size:1.16666em;font-weight:bold}
+		.st3 {stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st4 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st5 {fill:#351967;font-family:Calibri;font-size:1.00001em}
+		.st6 {fill:#dcdae4}
+		.st7 {stroke:#4c268e;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st8 {fill:#4b258c;font-family:Calibri;font-size:1.16666em;font-weight:bold}
+		.st9 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st10 {fill:#000000;font-family:Calibri;font-size:1.00001em}
+		.st11 {stroke:#472385;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st12 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Pagina 1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Connettore" v:index="0"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(261.241,-371.197)">
+			<title>Entità</title>
+			<desc>Assistito</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Database;DbEntity)"/>
+				<v:ud v:nameU="EntityName" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="EntityNameSpace" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="Weak" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="Composite" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="EntityName" v:prompt="" v:val="VT4(Assistito)"/>
+				<v:ud v:nameU="EntityNameSpace" v:prompt="" v:val="VT4(Assistito)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="40.5" cy="568.276" width="81" height="54"/>
+			<path d="M0 595.28 L81 595.28 L81 541.28 L0 541.28 L0 595.28 Z" class="st1"/>
+			<text x="15.83" y="572.48" class="st2" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Assistito</text>		</g>
+		<g id="shape2-4" v:mID="2" v:groupContext="shape" transform="translate(496.063,-279.444)">
+			<title>Entità.2</title>
+			<desc>Personale</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Database;DbEntity)"/>
+				<v:ud v:nameU="EntityName" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="EntityNameSpace" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="Weak" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="Composite" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="EntityName" v:prompt="" v:val="VT4(Personale)"/>
+				<v:ud v:nameU="EntityNameSpace" v:prompt="" v:val="VT4(Personale)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.3959" cy="568.276" width="92.8" height="54"/>
+			<path d="M0 595.28 L92.79 595.28 L92.79 541.28 L0 541.28 L0 595.28 Z" class="st1"/>
+			<text x="17.65" y="572.48" class="st2" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Personale</text>		</g>
+		<g id="shape14-7" v:mID="14" v:groupContext="shape" transform="translate(261.241,-187.691)">
+			<title>Entità.14</title>
+			<desc>Reparto</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Database;DbEntity)"/>
+				<v:ud v:nameU="EntityName" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="EntityNameSpace" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="Weak" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="Composite" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="EntityName" v:prompt="" v:val="VT4(Reparto)"/>
+				<v:ud v:nameU="EntityNameSpace" v:prompt="" v:val="VT4(Reparto)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="40.5" cy="568.276" width="81" height="54"/>
+			<path d="M0 595.28 L81 595.28 L81 541.28 L0 541.28 L0 595.28 Z" class="st1"/>
+			<text x="17.15" y="572.48" class="st2" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Reparto</text>		</g>
+		<g id="group16-10" transform="translate(294.654,-371.197)" v:mID="16" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-1.5707963267949):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.16</title>
+			<desc>N</desc>
+			<g id="shape16-11" v:mID="16" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="7.08661" cy="614.152" width="60.01" height="22.4037"/>
+				<path d="M7.09 595.28 L7.09 633.03" class="st3"/>
+				<rect v:rectContext="textBkgnd" x="3.21348" y="606.952" width="7.74619" height="14.4001" class="st4"/>
+				<text x="3.21" y="617.75" class="st5" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>N</text>			</g>
+		</g>
+		<g id="group21-16" transform="translate(294.654,-241.691)" v:mID="21" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(1.5707963267949):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.21</title>
+			<desc>N</desc>
+			<g id="shape21-17" v:mID="21" v:groupContext="groupContent" v:layerMember="0">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="7.08661" cy="576.399" width="60.01" height="22.4037"/>
+				<path d="M7.09 595.28 L7.09 557.52" class="st3"/>
+				<rect v:rectContext="textBkgnd" x="3.21348" y="569.199" width="7.74619" height="14.4001" class="st4"/>
+				<text x="3.21" y="580" class="st5" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>N</text>			</g>
+		</g>
+		<g id="shape26-22" v:mID="26" v:groupContext="shape" transform="translate(261.241,-279.444)">
+			<title>Entità associativa </title>
+			<desc>Degenza</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Database;DbEntity)"/>
+				<v:ud v:nameU="EntityName" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="EntityNameSpace" v:prompt="" v:val="VT4()"/>
+				<v:ud v:nameU="Weak" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="Composite" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="EntityName" v:prompt="" v:val="VT4(Degenza)"/>
+				<v:ud v:nameU="EntityNameSpace" v:prompt="" v:val="VT4(Degenza)"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="40.5" cy="568.276" width="81" height="54"/>
+			<path d="M0 595.28 L81 595.28 L81 541.28 L0 541.28 L0 595.28 Z" class="st6"/>
+			<path d="M0 595.28 L81 595.28 L81 541.28 L0 541.28 L0 595.28" class="st7"/>
+			<path d="M0 568.28 L40.5 595.28 L81 568.28 L40.5 541.28 L0 568.28" class="st7"/>
+			<text x="15.73" y="572.48" class="st8" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Degenza</text>		</g>
+		<g id="shape41-27" v:mID="41" v:groupContext="shape" transform="translate(354.331,-218.268)">
+			<title>Foglio.41</title>
+			<desc>idR</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="587.48" width="28.35" height="15.5906"/>
+			<rect x="0" y="579.685" width="28.3465" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>idR</text>		</g>
+		<g id="group51-30" transform="translate(341.199,-218.976)" v:mID="51" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(0):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico</title>
+			<g id="shape51-31" v:mID="51" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M1.04 588.19 L13.13 588.19" class="st11"/>
+			</g>
+		</g>
+		<g id="shape61-34" v:mID="61" v:groupContext="shape" transform="translate(354.331,-197.008)">
+			<title>Foglio.61</title>
+			<desc>Maxposti</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.9134" cy="587.48" width="61.83" height="15.5906"/>
+			<rect x="0" y="579.685" width="61.8268" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>Maxposti</text>		</g>
+		<g id="group62-37" transform="translate(341.199,-197.717)" v:mID="62" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(0):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.62</title>
+			<g id="shape62-38" v:mID="62" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M1.04 588.19 L13.13 588.19" class="st11"/>
+			</g>
+		</g>
+		<g id="shape67-41" v:mID="67" v:groupContext="shape" transform="translate(354.331,-317.853)">
+			<title>Foglio.67</title>
+			<desc>idD</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="587.48" width="28.35" height="15.5906"/>
+			<rect x="0" y="579.685" width="28.3465" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>idD</text>		</g>
+		<g id="shape68-44" v:mID="68" v:groupContext="shape" transform="translate(354.331,-279.444)">
+			<title>Foglio.68</title>
+			<desc>DataOut</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.9134" cy="587.48" width="61.83" height="15.5906"/>
+			<rect x="0" y="579.685" width="61.8268" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>DataOut</text>		</g>
+		<g id="group69-47" transform="translate(355.372,-318.562)" v:mID="69" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(3.1415926535898):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.69</title>
+			<g id="shape69-48" v:mID="69" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M-1.04 588.19 L-13.13 588.19" class="st11"/>
+			</g>
+		</g>
+		<g id="group74-51" transform="translate(355.372,-280.153)" v:mID="74" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(3.1415926535898):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.74</title>
+			<g id="shape74-52" v:mID="74" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M-1.04 588.19 L-13.13 588.19" class="st11"/>
+			</g>
+		</g>
+		<g id="shape95-55" v:mID="95" v:groupContext="shape" transform="translate(352.248,-297.638)">
+			<title>Foglio.95</title>
+			<desc>DataIn</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.9134" cy="587.48" width="61.83" height="15.5906"/>
+			<rect x="0" y="579.685" width="61.8268" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>DataIn</text>		</g>
+		<g id="group96-58" transform="translate(354.331,-298.346)" v:mID="96" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(3.1415926535898):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.96</title>
+			<g id="shape96-59" v:mID="96" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M-2.08 588.19 L-12.09 588.19" class="st11"/>
+			</g>
+		</g>
+		<g id="shape110-62" v:mID="110" v:groupContext="shape" transform="translate(313.894,-437.953)">
+			<title>Foglio.110</title>
+			<desc>idA</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="587.48" width="28.35" height="15.5906"/>
+			<rect x="0" y="579.685" width="28.3465" height="15.5906" class="st9"/>
+			<text x="6.17" y="591.08" class="st10" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>idA</text>		</g>
+		<g id="shape111-65" v:mID="111" v:groupContext="shape" transform="translate(354.331,-382.677)">
+			<title>Foglio.111</title>
+			<desc>DataOut</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.9134" cy="587.48" width="61.83" height="15.5906"/>
+			<rect x="0" y="579.685" width="61.8268" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>DataOut</text>		</g>
+		<g id="group112-68" transform="translate(320.981,-438.661)" v:mID="112" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-1.5707963267949):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.112</title>
+			<g id="shape112-69" v:mID="112" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M7.09 595.98 L7.09 608.74" class="st11"/>
+			</g>
+		</g>
+		<g id="group117-72" transform="translate(355.372,-382.465)" v:mID="117" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(3.1415926535898):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.117</title>
+			<g id="shape117-73" v:mID="117" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M-1.04 588.19 L-13.13 588.19" class="st11"/>
+			</g>
+		</g>
+		<g id="shape122-76" v:mID="122" v:groupContext="shape" transform="translate(354.331,-403.228)">
+			<title>Foglio.122</title>
+			<desc>DataIn</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.9134" cy="587.48" width="61.83" height="15.5906"/>
+			<rect x="0" y="579.685" width="61.8268" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>DataIn</text>		</g>
+		<g id="group123-79" transform="translate(355.372,-403.937)" v:mID="123" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(3.1415926535898):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.123</title>
+			<g id="shape123-80" v:mID="123" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M-1.04 588.19 L-13.13 588.19" class="st11"/>
+			</g>
+		</g>
+		<g id="shape128-83" v:mID="128" v:groupContext="shape" transform="translate(261.241,-437.953)">
+			<title>Foglio.128</title>
+			<desc>CF</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="587.48" width="28.35" height="15.5906"/>
+			<rect x="0" y="579.685" width="28.3465" height="15.5906" class="st9"/>
+			<text x="8.22" y="591.08" class="st10" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>CF</text>		</g>
+		<g id="group134-86" transform="translate(266.432,-438.661)" v:mID="134" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-1.5707963267949):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.134</title>
+			<g id="shape134-87" v:mID="134" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M7.09 595.98 L7.09 608.74" class="st11"/>
+			</g>
+		</g>
+		<g id="shape139-90" v:mID="139" v:groupContext="shape" transform="translate(528.286,-348.438)">
+			<title>Foglio.139</title>
+			<desc>idP</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="587.48" width="28.35" height="15.5906"/>
+			<rect x="0" y="579.685" width="28.3465" height="15.5906" class="st9"/>
+			<text x="6.54" y="591.08" class="st10" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>idP</text>		</g>
+		<g id="group140-93" transform="translate(535.372,-348.438)" v:mID="140" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-1.5707963267949):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.140</title>
+			<g id="shape140-94" v:mID="140" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M7.09 595.28 L7.09 610.27" class="st11"/>
+			</g>
+		</g>
+		<g id="shape145-97" v:mID="145" v:groupContext="shape" transform="translate(511.546,-248.86)">
+			<title>Foglio.145</title>
+			<desc>Privilegio</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.9134" cy="587.48" width="61.83" height="15.5906"/>
+			<rect x="0" y="579.685" width="61.8268" height="15.5906" class="st9"/>
+			<text x="8.53" y="591.08" class="st10" v:langID="1040"><v:paragraph v:horizAlign="1"/><v:tabList/>Privilegio</text>		</g>
+		<g id="group146-100" transform="translate(535.372,-264.45)" v:mID="146" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(1.5707963267949):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.146</title>
+			<g id="shape146-101" v:mID="146" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M7.09 595.28 L7.09 580.28" class="st11"/>
+			</g>
+		</g>
+		<g id="shape157-104" v:mID="157" v:groupContext="shape" transform="translate(604.315,-279.444)">
+			<title>Foglio.157</title>
+			<desc>username</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.9134" cy="587.48" width="61.83" height="15.5906"/>
+			<rect x="0" y="579.685" width="61.8268" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>username</text>		</g>
+		<g id="group158-107" transform="translate(588.855,-280.153)" v:mID="158" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(0):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.158</title>
+			<g id="shape158-108" v:mID="158" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M0 588.19 L15.46 588.19" class="st11"/>
+			</g>
+		</g>
+		<g id="shape163-111" v:mID="163" v:groupContext="shape" transform="translate(600.439,-318.189)">
+			<title>Foglio.163</title>
+			<desc>password</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.9134" cy="587.48" width="61.83" height="15.5906"/>
+			<rect x="0" y="579.685" width="61.8268" height="15.5906" class="st9"/>
+			<text x="4" y="591.08" class="st10" v:langID="1040"><v:paragraph/><v:tabList/>password</text>		</g>
+		<g id="group164-114" transform="translate(587.56,-318.73)" v:mID="164" v:groupContext="group" v:layerMember="0">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowMulti" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(-0.78539816339745):32"/>
+				<v:ud v:nameU="BeginAngle" v:prompt="" v:val="VT0(0):32"/>
+			</v:userDefs>
+			<title>Connettore dinamico.164</title>
+			<g id="shape164-115" v:mID="164" v:groupContext="groupContent" v:layerMember="0">
+				<path d="M1.29 588.19 L12.88 588.19" class="st11"/>
+			</g>
+		</g>
+	</g>
+</svg>
