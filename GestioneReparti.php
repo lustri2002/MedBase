@@ -89,19 +89,25 @@ session_start();
 </nav>
 <!--/.Navbar-->
 <?php
+    require "protected/connessione.php";
     if(count($_SESSION) && ($_SESSION['utente']->privilegio & 8) > 0){
-        $query = "SELECT * FROM Reparto";
+        $query = "SELECT nomeR, MaxPosti FROM Reparto";
         $result = mysqli_query($con, $query);
         echo '
         <div class="box">
             <div>
                 <img src="img/medbase.png" alt="" class="title_header">
-                <table>'
-                    .while(){
-                        echo ' 
+                <table>
+                    <tr>
+                        <td>Nome Reparto</td>
+                        <td>Posti disponibili</td>
+                    </tr>';
+                    while($row = $result->fetch_object()){
+                        echo " 
                         <tr>
-                            <td></td>
-                        </tr>';
+                            <td>$row->nomeR</td>
+                            <td>$row->MaxPosti</td>
+                        </tr>";
                     } echo'                    
                 </table>
             </div>
