@@ -59,8 +59,8 @@ input[type="submit"]{
     background-color: #006AB3;
     border-radius: 10px;
     border: none;
-    padding: 10px;
-    margin: 5% 0 25px 0 ;
+    padding: 13px;
+    margin: 10px 0 25px 0 ;
     color: white;
     width: 80%;
     font-weight: bold;
@@ -145,7 +145,9 @@ img .navbar-brand{
 
 /*------MODAL LOGIN CSS----------*/
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password],
+input[type=number]  {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -274,12 +276,13 @@ span.psw {
 }
 
 .box{
-    margin: 3% auto;
-    width: 50%;
+    margin: 3% 10%;
+    width: 30%;
     text-align: center;
     border-radius: 20px;
     background-color: #4C258F;
     height: fit-content !important;
+    float: left;
 }
 
 .title_header{
@@ -301,18 +304,57 @@ span.psw {
 .table_content{
     padding: 10px;
     border-bottom: 2px solid #150C25;
+    color:black;
 }
 
 .edit_button{
-    margin-left: 10%;
-    border-radius: 20px;
-
+    padding: 10px;
+}
+.edit_button:hover{
+    color: forestgreen;
+    cursor: pointer;
+}
+.remove_button{
+    padding: 10px;
+}
+.remove_button:hover{
+    color: #B32100;
+    cursor: pointer;
 }
 
 tr:nth-child(even){
-    background-color: #602EB5;
+    background-color: #5DCBFF;
 }
 
 tr:nth-child(odd){
-    background-color: #30175C;
+    background-color: #FBFBFB;
+}
+
+.box h3{
+    font-weight: 550;
+}
+
+.select_box {
+    width: 45%;
+    padding: 13px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.select_box option:hover {
+    background-color: #006AB3; /*hide original SELECT element: */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }

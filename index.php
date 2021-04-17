@@ -4,12 +4,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="https://kit.fontawesome.com/fcfff31d0b.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E"></script>
     <title>MedBase</title>
     <link rel="icon" href="img/mb.png">
 </head>
@@ -64,7 +65,7 @@
                                       </button>
                                       <div class="dropdown-menu dropdown-menu-right">';
                                           if(($_SESSION['utente']->privilegio & 1) > 0)
-                                            echo '<a class="dropdown-item dropitem" href="#">Dati reparti - (1)</a>';
+                                            echo '<a class="dropdown-item dropitem" href="#">Statistiche - (1)</a>';
                                           if(($_SESSION['utente']->privilegio & 2) > 0)
                                             echo '<a class="dropdown-item dropitem" href="#">Inserimento paziente - (2)</a>';
                                           if(($_SESSION['utente']->privilegio & 4) > 0)
@@ -74,7 +75,7 @@
                                           if(($_SESSION['utente']->privilegio & 16) > 0)
                                             echo '<a class="dropdown-item dropitem" href="#">Gestione utenti - (16)</a>';
                                           echo '<div class="dropdown-divider"></div>
-                                          <a class="dropdown-item logout_item" href="logout.php" style="color: #B32100">Log-out</a>
+                                          <a class="dropdown-item logout_item" href="functions/logout.php" style="color: #B32100">Log-out</a>
                                       </div>
                                    </div>';
                         }
@@ -99,7 +100,7 @@
 
     <div id="id01" class="modal">
 
-        <form class="modal-content animate" action="LoginVerify.php" method="post">
+        <form class="modal-content animate" action="functions/LoginVerify.php" method="post">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <img src="img/medbase.png" alt="Avatar" class="avatar">
