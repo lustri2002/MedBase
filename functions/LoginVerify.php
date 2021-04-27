@@ -22,7 +22,7 @@ session_start();
 
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#" style="max-width: 200px; margin: 0; padding: 0; margin-right: 32px">
-        <img class="logo"src="../img/mb.png" style="max-width: 100%" >
+        <img class="logo" src="../img/mb.png" style="max-width: 100%" >
     </a>
 
     <!-- Collapse button -->
