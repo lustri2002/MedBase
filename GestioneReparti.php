@@ -72,7 +72,7 @@ session_start();
                     if(($_SESSION['utente']->privilegio & 1) > 0)
                         echo '<a class="dropdown-item dropitem" href="#">Statistiche - (1)</a>';
                     if(($_SESSION['utente']->privilegio & 2) > 0)
-                        echo '<a class="dropdown-item dropitem" href="#">Inserimento paziente - (2)</a>';
+                        echo '<a class="dropdown-item dropitem" href="InserimentoPazienti.php">Inserimento paziente - (2)</a>';
                     if(($_SESSION['utente']->privilegio & 4) > 0)
                         echo '<a class="dropdown-item dropitem" href="#">Dimissione paziente - (4)</a>';
                     if(($_SESSION['utente']->privilegio & 8) > 0)
@@ -99,10 +99,11 @@ session_start();
         $query = "SELECT * FROM Reparto";
         $result = mysqli_query($con, $query);
         echo '
-        <div>
-            <div class="box">
+        <div class="row">
+            <div class="col-0 col-md-4"></div>
+            <div class="box col-12 col-md-4" style="width: 30%">
                 <div style="text-align: center">
-                    <h3 style="padding-top: 15px"> Gestione Reparti</h3>
+                    <h3 style="padding-top: 15px">Reparti</h3>
                 </div>
                 <div style="margin-bottom: 2%">
                     <form action="functions/RimuoviReparti.php" method="post">
@@ -118,16 +119,20 @@ session_start();
                                     <td class='table_content' style='border-right: 2px solid #150C25'>$row->MaxPosti</td>
                                     <td style='background-color: #4C258F'>
                                         <button name='Remove'value='$row->idR' type='submit' style='background-color: transparent; width=auto; padding: 0; margin: 0'>
-                                            <i class='far fa-minus-square fa-2x remove_button' onclick='RemoveAjax()'></i>
+                                            <i class='far fa-minus-square fa-2x remove_button'></i>
                                         </button>
-                                    <td>
+                                    </td>
                                 </tr>";
                             } echo '                    
                         </table>
                     </form>
                 </div>
             </div>
-            <div class="box">
+            <div class="col-0 col-md-4"></div>
+        </div>
+        <div class="row" style="margin: 0">
+            <div class="col-0 col-md-1"></div>
+            <div class="box col-12 col-md-4">
                 <div style="padding-top: 15px"><h3>Inserisci nuovo reparto</h3></div>
                 <form action="functions/InserisciReparto.php" method="POST" style="height: 60%">
                     <input type="text" 
@@ -150,10 +155,11 @@ session_start();
                     >
                 </form>
             </div>
-            <div class="box">
+            <div class="col-0 col-md-2"></div>
+            <div class="box col-12 col-md-4">
                 <div style="padding-top: 15px"><h3>Modifica</h3></div>
                 <form action="functions/AggiornaReparto.php" method="POST" style="height: 60%">
-                    <select class="select_box" name="nomeR">
+                    <select class="select_box" name="idR">
                         <option value="0" disabled selected>Seleziona reparto</option>';
                         $sql="SELECT NomeR, idR From Reparto";
                         $listaReparti = mysqli_query($con, $sql);
@@ -177,6 +183,7 @@ session_start();
                     >
                 </form>
             </div>
+            <div class="col-0 col-md-1"></div>
         </div>';
 
     }

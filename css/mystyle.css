@@ -276,8 +276,7 @@ span.psw {
 }
 
 .box{
-    margin: 3% 10%;
-    width: 30%;
+    margin: 3% 0;
     text-align: center;
     border-radius: 20px;
     background-color: #4C258F;
@@ -357,4 +356,60 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+/* Style the search field */
+.example{
+    text-align: center;
+}
+.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+/* Style the submit button */
+.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #006AB3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid gray;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+.example button:hover {
+    background: #006AB3;
+}
+
+/* Clear floats */
+.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.example{
+    padding: 15px;
+}
+
+#SearchText{
+    text-transform: uppercase;
+}
+
+#SchedaPaziente{
+    text-align: center;
+}
+
+#table_paziente td{
+    padding: 15px;
+}
+#table_paziente {
+
 }

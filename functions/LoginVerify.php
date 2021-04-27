@@ -22,7 +22,7 @@ session_start();
 
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#" style="max-width: 200px; margin: 0; padding: 0; margin-right: 32px">
-        <img class="logo" src="../img/medbase.png" style="max-width: 100%" >
+        <img class="logo"src="../img/mb.png" style="max-width: 100%" >
     </a>
 
     <!-- Collapse button -->
@@ -56,27 +56,27 @@ session_start();
                 <?php
                 if(count($_SESSION) != 0){
                     echo '<div class="btn-group">
-                                      <button type="button" class="btn login_button">
-                                      '. $_SESSION['utente']->username .'
-                                      </button>
-                                      <button type="button" class="btn dropdown-toggle dropdown-toggle-split login_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="sr-only"></span>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right">';
+                                          <button type="button" class="btn login_button">
+                                          '. $_SESSION['utente']->username .'
+                                          </button>
+                                          <button type="button" class="btn dropdown-toggle dropdown-toggle-split login_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="sr-only"></span>
+                                          </button>
+                                          <div class="dropdown-menu dropdown-menu-right">';
                     if(($_SESSION['utente']->privilegio & 1) > 0)
-                        echo '<a class="dropdown-item dropitem" href="#">Statistiche</a>';
+                        echo '<a class="dropdown-item dropitem" href="../Statistiche.php">Statistiche - (1)</a>';
                     if(($_SESSION['utente']->privilegio & 2) > 0)
-                        echo '<a class="dropdown-item dropitem" href="#">Inserimento paziente - (2)</a>';
+                        echo '<a class="dropdown-item dropitem" href="../InserimentoPazienti.php">Inserimento paziente - (2)</a>';
                     if(($_SESSION['utente']->privilegio & 4) > 0)
-                        echo '<a class="dropdown-item dropitem" href="#">Dimissione paziente - (4)</a>';
+                        echo '<a class="dropdown-item dropitem" href="../DimissionePazienti.php">Dimissione paziente - (4)</a>';
                     if(($_SESSION['utente']->privilegio & 8) > 0)
                         echo '<a class="dropdown-item dropitem" href="../GestioneReparti.php">Gestione reparti - (8)</a>';
                     if(($_SESSION['utente']->privilegio & 16) > 0)
-                        echo '<a class="dropdown-item dropitem" href="#">Gestione utenti - (16)</a>';
+                        echo '<a class="dropdown-item dropitem" href="../GestioneUtenti.php">Gestione utenti - (16)</a>';
                     echo '<div class="dropdown-divider"></div>
-                                          <a class="dropdown-item logout_item" href="logout.php" style="color: #B32100">Log-out</a>
-                                      </div>
-                                   </div>';
+                                              <a class="dropdown-item logout_item" href="logout.php" style="color: #B32100">Log-out</a>
+                                          </div>
+                                       </div>';
                 }
                 else
                     echo '<button class="nav-link login_button" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="">Login</button>';
