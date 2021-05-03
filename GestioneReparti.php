@@ -100,39 +100,47 @@ session_start();
         $result = mysqli_query($con, $query);
         echo '
         <div class="row">
-            <div class="col-0 col-md-4"></div>
-            <div class="box col-12 col-md-4" style="width: 30%">
+            <div class="col-1 col-xl-3"></div>
+            <div class="box col-10 col-xl-6" style="width: 30%">
                 <div style="text-align: center">
                     <h3 style="padding-top: 15px">Reparti</h3>
                 </div>
                 <div style="margin-bottom: 2%">
-                    <form action="functions/RimuoviReparti.php" method="post">
-                        <table class="DefaultTable">
+                    <table class="DefaultTable">
+                        <tr>
+                            <td class="table_header" style="border-right: none">Nome Reparto</td>
+                            <td class="table_header" style="border-left: none; border-right: none">Posti letto</td>
+                            <td class="table_header" style="border-left: none">Posti disponibili</td>
+                        </tr>';
+                        while($row = $result->fetch_object()){
+                            $sql = "select count(*) as PostiOccupati from degenza where DataOut is null and idR='$row->idR'";
+                            $PostiOccupati = mysqli_query($con, $sql)->fetch_object()->PostiOccupati;
+                            $PostiDisp = $row->MaxPosti - $PostiOccupati;
+                            echo " 
                             <tr>
-                                <td class="table_header" style="border-right: none">Nome Reparto</td>
-                                <td class="table_header" style="border-left: none">Posti letto</td>
-                            </tr>';
-                            while($row = $result->fetch_object()){
-                                echo " 
-                                <tr>
-                                    <td class='table_content' style='border-left: 2px solid #150C25; text-align: left'>$row->NomeR</td>
-                                    <td class='table_content' style='border-right: 2px solid #150C25'>$row->MaxPosti</td>
-                                    <td style='background-color: #4C258F'>
-                                        <button name='Remove'value='$row->idR' type='submit' style='background-color: transparent; width=auto; padding: 0; margin: 0'>
-                                            <i class='far fa-minus-square fa-2x remove_button'></i>
-                                        </button>
-                                    </td>
-                                </tr>";
-                            } echo '                    
-                        </table>
-                    </form>
+                                <td class='table_content' style='border-left: 2px solid #150C25; text-align: left'>$row->NomeR</td>
+                                <td class='table_content'>$row->MaxPosti</td>
+                                <td class='table_content' style='border-right: 2px solid #150C25'>$PostiDisp</td>
+                                <td style='background-color: #4C258F'>
+                                    <button onclick='RimuoviReparto($row->idR, $row->MaxPosti,$PostiOccupati)' style='background-color: transparent; width=auto; padding: 0; margin: 0'>
+                                        <i class='far fa-minus-square fa-2x remove_button'></i>
+                                    </button>
+                                </td>
+                                <td style='background-color: #4C258F'>
+                                    <button onclick='ListaPazienti($row->idR)' style='background-color: transparent; width=auto; padding: 0; margin: 0'>
+                                        <i class='far fa-plus-square fa-2x add_button'></i>
+                                    </button>
+                                </td>
+                            </tr>";
+                        } echo '                    
+                    </table>
                 </div>
             </div>
-            <div class="col-0 col-md-4"></div>
+            <div class="col-1 col-xl-3"></div>
         </div>
         <div class="row" style="margin: 0">
-            <div class="col-0 col-md-1"></div>
-            <div class="box col-12 col-md-4">
+            <div class="col-1 col-md-1"></div>
+            <div class="box col-10 col-md-4">
                 <div style="padding-top: 15px"><h3>Inserisci nuovo reparto</h3></div>
                 <form action="functions/InserisciReparto.php" method="POST" style="height: 60%">
                     <input type="text" 
@@ -155,8 +163,9 @@ session_start();
                     >
                 </form>
             </div>
-            <div class="col-0 col-md-2"></div>
-            <div class="box col-12 col-md-4">
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="box col-10 col-md-4">
                 <div style="padding-top: 15px"><h3>Modifica</h3></div>
                 <form action="functions/AggiornaReparto.php" method="POST" style="height: 60%">
                     <select class="select_box" name="idR">
@@ -182,7 +191,7 @@ session_start();
                     >
                 </form>
             </div>
-            <div class="col-0 col-md-1"></div>
+            <div class="col-1 col-md-1"></div>
         </div>';
 
     }
@@ -218,6 +227,11 @@ session_start();
         </div>
     </form>
 </div>
+
+<div id="listaRicoverati" class="modal" style="display: none;  backdrop-filter: blur(5px);">
+
+</div>
+
 <script>
     // Get the modal
     var modal = document.getElementById('id01');
@@ -229,7 +243,16 @@ session_start();
         }
     }
 </script>
-<!-- jQuery and Bootstrap Bundle (includes Popper) -->
+<script>
+    // Get the modal
+    var modal = document.getElementById('listaRicoverati');
 
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>

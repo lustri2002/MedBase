@@ -1,13 +1,12 @@
 <?php
-    $idR = $_POST['Remove'];
-    $sql = "DELETE FROM reparto WHERE idR = $idR";
+    $idR = $_POST['idR'];
+    $MaxPosti = $_POST['MaxPosti'];
+    $PostiOccupati = $_POST['PostiOccupati'];
+    $sql = "DELETE FROM reparto WHERE idR = '$idR'";
     require "../protected/connessione.php";
-    if(mysqli_query($con, $sql)){
-        header("location: ../GestioneReparti.php");
-        //echo $sql;
+    if($PostiOccupati === "0"){
+       mysqli_query($con, $sql);
+       echo "success";
     }
-    else echo "
-                 <div class='login_error_box'>  
-                    <p class='login_error'>Errore nell'eliminazione</p>
-                 </div>";
+    else echo "failed";
 ?>

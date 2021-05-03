@@ -215,7 +215,7 @@ span.psw {
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal-content{
     background-color: #262A2B;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #262A2B;
@@ -313,11 +313,17 @@ span.psw {
     color: forestgreen;
     cursor: pointer;
 }
-.remove_button{
+.remove_button,
+    .add_button{
     padding: 10px;
 }
 .remove_button:hover{
-    color: #B32100;
+    color: #b32100;
+    cursor: pointer;
+}
+
+.add_button:hover{
+    color: #26B300;
     cursor: pointer;
 }
 

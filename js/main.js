@@ -190,3 +190,60 @@ function StatsPaziente(){
         }
     )
 }
+
+function RimuoviReparto(idR, MaxPosti, PostiOccupati){
+    $.ajax({
+        url: 'functions/RimuoviReparti.php',
+        type: 'POST',
+        data:{
+            idR: idR,
+            PostiOccupati: PostiOccupati,
+            MaxPosti: MaxPosti,
+        },
+        success: (response) => {
+            if (response ==="failed"){
+                alert("Reparto occupato, deve essere vuoto");
+            }
+            else if(response === "success")
+                window.location.reload();
+        }
+    });
+}
+
+function ListaPazienti(idR){
+    $.ajax({
+        url: 'functions/ListaPazienti.php',
+        type: 'POST',
+        data:{
+            idR: idR,
+        },
+        success: (response) => {
+            let Data = response.split("\n");
+            Data.pop();
+            let HTML = `
+                <div class="animate" style="background-color: transparent; width: fit-content; margin: 0 auto;">
+                    <table class="DefaultTable" style="text-align: left">
+                        <tr>
+                            <td class="table_header" style="text-align: center; border-right: none;">Nome</td>
+                            <td class="table_header" style=" border-left: none; border-right: none; text-align: center">Cognome</td>
+                            <td class="table_header" style="text-align: center; border-left: none;">Codice fiscale</td>
+                        </tr>`;
+                        for(let i = 0; i<Data.length; ++i){
+                            let row = Data[i].split(";");
+                            HTML += `
+                                <tr>
+                                    <td class='table_content' style='border-left: 2px solid #150C25; text-align: left'>${row[0]}</td>
+                                    <td class='table_content'>${row[1]}</td>
+                                    <td class='table_content' style='border-right: 2px solid #150C25'>${row[2]}</td>
+                                </tr>
+                            `;
+                        }
+                    HTML+=`
+                    </table>
+                </div>`;
+            $("#listaRicoverati").html(HTML);
+            $("#listaRicoverati").css("display", "block");
+        }
+    });
+}
+
