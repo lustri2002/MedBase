@@ -70,15 +70,15 @@ session_start();
                                       </button>
                                       <div class="dropdown-menu dropdown-menu-right">';
                     if(($_SESSION['utente']->privilegio & 1) > 0)
-                        echo '<a class="dropdown-item dropitem" href="#">Statistiche - (1)</a>';
+                        echo '<a class="dropdown-item dropitem" href="Statistiche.php">Statistiche - (1)</a>';
                     if(($_SESSION['utente']->privilegio & 2) > 0)
                         echo '<a class="dropdown-item dropitem" href="InserimentoPazienti.php">Inserimento paziente - (2)</a>';
                     if(($_SESSION['utente']->privilegio & 4) > 0)
-                        echo '<a class="dropdown-item dropitem" href="#">Dimissione paziente - (4)</a>';
+                        echo '<a class="dropdown-item dropitem" href="DimissionePazienti.php">Dimissione paziente - (4)</a>';
                     if(($_SESSION['utente']->privilegio & 8) > 0)
                         echo '<a class="dropdown-item dropitem" href="GestioneReparti.php">Gestione reparti - (8)</a>';
                     if(($_SESSION['utente']->privilegio & 16) > 0)
-                        echo '<a class="dropdown-item dropitem" href="#">Gestione utenti - (16)</a>';
+                        echo '<a class="dropdown-item dropitem" href="GestioneUtenti.php">Gestione utenti - (16)</a>';
                     echo '<div class="dropdown-divider"></div>
                                           <a class="dropdown-item logout_item" href="functions/logout.php" style="color: #B32100">Log-out</a>
                                       </div>
@@ -165,8 +165,7 @@ session_start();
                         $listaReparti = mysqli_query($con, $sql);
                         while ($row = $listaReparti->fetch_object()){
                             echo"
-                            <option value='$row->idR'>$row->NomeR</option>
-                            ";
+                            <option value='$row->idR'>$row->NomeR</option>";
                         }
                     echo '</select>
                     <input type="number"

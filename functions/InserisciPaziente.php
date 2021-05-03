@@ -6,12 +6,14 @@
     $idR = $_POST['nomeR'];
     $DataInizio = date("Y-m-d");
 
+    $nome = str_replace('\'', '`', $nome);
+    $cognome = str_replace('\'', '`', $cognome);
     require "../protected/connessione.php";
     $sql = "SELECT CF, idA FROM Assistito WHERE CF = '$CF'";
     $result = mysqli_query($con, $sql);
     if(mysqli_num_rows($result)===0)
     {
-        $sql = "INSERT INTO assistito(nomeA, cognomeA, CF) VALUES ($nome, $cognome, $CF)";
+        $sql = "INSERT INTO assistito(nomeA, cognomeA, CF) VALUES ('$nome', '$cognome', '$CF')";
         if(mysqli_query($con, $sql))
         {
             $idA = $con->insert_id; //Prende l'ID dell'ultimo insert

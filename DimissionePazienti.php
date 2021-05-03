@@ -96,17 +96,13 @@ session_start();
 <?php
 require "protected/connessione.php";
     if(count($_SESSION) && ($_SESSION['utente']->privilegio & 4) > 0){
-        $nomePaziente="";
-        $cognomePaziente="";
-        $cf = "";
-
         echo "  <div class='row'>
                     <div class='col-lg-4 col-1'></div>
                     <div class='col-lg-4 col-10' style='text-align: center'>
                         <div class='box example' style='width: 100%'>
                             <h3 style='padding-top: 15px; margin: 0'>Ricerca</h3>
-                                <input type='text' placeholder='Codice fiscale' name='search' id='SearchText'>
-                                <button onclick='RicercaPaziente()'><i class='fa fa-search'></i></button>
+                            <input type='text' placeholder='Codice fiscale' name='search' id='SearchText'>
+                            <button id='searchButton' onclick='RicercaPaziente()'><i class='fa fa-search'></i></button>
                         </div>
                     </div>
                     <div class='col-lg-4 col-1'></div>
@@ -142,7 +138,7 @@ require "protected/connessione.php";
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Inserisci Password" name="psw" id="password" required>
 
-            <button type="submit">Login</button>
+            <button class="loginbtn" type="submit">Login</button>
         </div>
 
         <div class="container" style="background-color:#1C1F1F">

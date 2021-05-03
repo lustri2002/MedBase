@@ -36,3 +36,17 @@ function CheckDegenza($idA){ //VERIFICA CHE IL PAZIENTE NON SIA GIà RICOVERATO 
     $DegenzeAttive = mysqli_query($con,$sql)->fetch_object()->DegenzeAttive;
     return $DegenzeAttive;
 }
+
+function CalcolaMedia($idR){
+    $con = @ new mysqli (SERVERDATABASE, USERNAME, PASSWORD, NOMEDATABASE);
+    $sql = "SELECT datediff(DataOut, DataIn)+1 as Giorni from degenza where idR=$idR and DataOut is not null";
+    $Result = mysqli_query($con, $sql);
+    $NumRicoveri = $Result->num_rows;
+    $SommaGiorni = 0;
+    if($NumRicoveri == 0)
+        return 0;
+    else {
+        while ($row = $Result->fetch_object()) $SommaGiorni += $row->Giorni;
+        return $SommaGiorni/$NumRicoveri;
+    }
+}

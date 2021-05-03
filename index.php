@@ -88,15 +88,58 @@
         <!-- Collapsible content -->
     </nav>
     <!--/.Navbar-->
-    <div class="banner">
-        <div class="banner_text">
-            <h2>BANNER TITOLO</h2><br>
-            <p>breve introduzione</p>
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <h1>Benvenuti in MedBase</h1>
+            <h2>La piattaforma di gestione ospedaliera n. 1 sul mercato</h2>
         </div>
-        <div class="banner_image">
-            <img src="img/homepage4.jpg" alt="">
-        </div>
-    </div>
+    </section>
+
+    <main id="main">
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-4 d-flex align-items-stretch">
+                        <div class="content">
+                            <h3>Perchè scegliere MedBase?</h3>
+                            <p>
+                                É una piattaforma facile, intuitiva e affidabile per la gestione di strutture ospedaliere,
+                                anche polispecialistiche. <br>
+                                Tiene traccia,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 d-flex align-items-stretch">
+                        <div class="icon-boxes d-flex flex-column justify-content-center">
+                            <div class="row">
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <h4>Facile e intuitivo</h4>
+                                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <h4>Affidabile</h4>
+                                        <p>I dati vengono salvati su più dischi in modo da garantirne l'integrità e la loro sicurezza.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <h4>Assistenza</h4>
+                                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End .content-->
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Why Us Section -->
 
     <div id="id01" class="modal">
 
