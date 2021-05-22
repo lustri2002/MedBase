@@ -28,7 +28,7 @@
 
         //Recipients
         $mail->setFrom($mailFrom, $Nome);
-        $mail->addAddress('no-reply@alessiolustri.it', "Support MedBase");     //Add a recipient
+        $mail->addAddress('#', "Support MedBase");     //Add a recipient
 
         //Content
         $mail->Subject = $Subject;
