@@ -1,4 +1,10 @@
 <?php
+    require "../protected/connessione.php";
+    session_start();
+    if(!(isset($_SESSION['utente'])) or (($_SESSION['utente']->privilegio & 16) == 0)){
+        alert('Non consentito','../index.php');
+        die();
+    }
     $Username=$_POST['username'];
     $UsernameConfirm=$_POST['usernameConfirm'];
     $Password = $_POST['password'];
@@ -8,26 +14,24 @@
                     (isset($_POST['medico']) ? $_POST['medico'] : 0) +
                     (isset($_POST['direttore']) ? $_POST['direttore'] : 0) +
                     (isset($_POST['amministratore']) ? $_POST['amministratore'] : 0);
-    require "../protected/connessione.php";
-    $sql = "select * from personale where username='$Username'";
+
+    $sql = "select * from personale  where username='$Username'";
     $Result = mysqli_query($con, $sql);
     if($Result->num_rows === 0){
         if ($Username === $UsernameConfirm AND $Password === $PasswordConfirm){
-            $sql = "insert into personale(username, password, privilegio) values('$Username', '$Password', '$Privilegio')";
+            $Password = hash("sha512",$Password);
+            $sql = "insert into personale (username, password, privilegio) values('$Username', '$Password', '$Privilegio')";
             if(mysqli_query($con, $sql)){
                 header("location: ../GestioneUtenti.php");
             }
             else{
-                alert("ERRORE");
-                header("refresh:3,url=../GestioneUtenti.php");
+                alert("ERRORE","../GestioneUtenti.php");
             }
         }
         else{
-            alert("Username o password non corrispondono");
-            header("refresh:3,url=../GestioneUtenti.php");
+            alert("Username o password non corrispondono","../GestioneUtenti.php");
         }
     }
     else{
-        alert("Username già utilizzato");
-        header("refresh:3,url=../GestioneUtenti.php");
+        alert("Username già utilizzato","../GestioneUtenti.php");
     }

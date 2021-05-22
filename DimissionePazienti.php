@@ -27,7 +27,7 @@ session_start();
 <nav class="navbar navbar-expand-lg navbar-dark primary-color" style="background-color: #4C258F">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#" style="max-width: 200px; margin: 0; padding: 0; margin-right: 32px">
+    <a class="navbar-brand" href="index.php" style="max-width: 200px; margin: 0; padding: 0; margin-right: 32px">
         <img class="logo"src="img/mb.png" style="max-width: 100%" >
     </a>
 
@@ -45,15 +45,7 @@ session_start();
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Ospedali</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Dati</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
+
 
         </ul>
         <!-- Links -->
@@ -70,19 +62,22 @@ session_start();
                               </button>
                               <div class="dropdown-menu dropdown-menu-right">';
                                     if(($_SESSION['utente']->privilegio & 1) > 0)
-                                        echo '<a class="dropdown-item dropitem" href="Statistiche.php">Statistiche - (1)</a>';
+                                        echo '<a class="dropdown-item dropitem" href="Statistiche.php">Statistiche</a>';
                                     if(($_SESSION['utente']->privilegio & 2) > 0)
-                                        echo '<a class="dropdown-item dropitem" href="InserimentoPazienti.php">Inserimento paziente - (2)</a>';
+                                        echo '<a class="dropdown-item dropitem" href="InserimentoPazienti.php">Inserimento paziente</a>';
                                     if(($_SESSION['utente']->privilegio & 4) > 0)
-                                        echo '<a class="dropdown-item dropitem" href="DimissionePazienti.php">Dimissione paziente - (4)</a>';
+                                        echo '<a class="dropdown-item dropitem" href="DimissionePazienti.php">Dimissione paziente</a>';
                                     if(($_SESSION['utente']->privilegio & 8) > 0)
-                                        echo '<a class="dropdown-item dropitem" href="GestioneReparti.php">Gestione reparti - (8)</a>';
+                                        echo '<a class="dropdown-item dropitem" href="GestioneReparti.php">Gestione reparti</a>';
                                     if(($_SESSION['utente']->privilegio & 16) > 0)
-                                        echo '<a class="dropdown-item dropitem" href="GestioneUtenti.php">Gestione utenti - (16)</a>';
-                                    echo '<div class="dropdown-divider"></div>
-                                        <a class="dropdown-item logout_item" href="functions/logout.php" style="color: #B32100">Log-out</a>
-                                  </div>
-                           </div>';
+                                        echo '<a class="dropdown-item dropitem" href="GestioneUtenti.php">Gestione utenti</a>';
+                                    echo '
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item dropitem" onclick="document.getElementById(\'PasswordRecovery\').style.display=\'block\'">Modifica password</a>
+                                                <div class="dropdown-divider"></div>                                                        
+                                                <a class="dropdown-item logout_item" href="functions/logout.php" style="color: #B32100">Log-out</a>
+                                      </div>
+                                    </div>';
                 }
                 else
                     echo '<button class="nav-link login_button" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="">Login</button>';
@@ -101,7 +96,7 @@ require "protected/connessione.php";
                     <div class='col-lg-4 col-10' style='text-align: center'>
                         <div class='box example' style='width: 100%'>
                             <h3 style='padding-top: 15px; margin: 0'>Ricerca</h3>
-                            <input type='text' placeholder='Codice fiscale' name='search' id='SearchText'>
+                            <input type='text'  required placeholder='Codice fiscale' name='search' id='SearchText'>
                             <button id='searchButton' onclick='RicercaPaziente()'><i class='fa fa-search'></i></button>
                         </div>
                     </div>
@@ -143,18 +138,36 @@ require "protected/connessione.php";
 
         <div class="container" style="background-color:#1C1F1F">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+
         </div>
     </form>
 </div>
+
+<div id="PasswordRecovery" class="modal">
+    <form class="modal-content animate" action="functions/UpdatePsw.php" method="post">
+        <div class="container">
+            <label for="oldpsw"><b>Inserisci la password attuale</b></label>
+            <input type="password" placeholder="Inserisci password" name="oldpsw" id="oldpsw" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Nuova Password" name="psw" id="password" required>
+            <input type="password" placeholder="Conferma Password" name="pswconfirm" id="passwordconfirm" required>
+        </div>
+        <div class="container" style="background-color:#1C1F1F">
+            <button type="submit">Salva</button>
+        </div>
+    </form>
+</div>
+
 <script>
     // Get the modal
     var modal = document.getElementById('id01');
+    var modal2 = document.getElementById('PasswordRecovery');
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target == modal || event.target == modal2) {
             modal.style.display = "none";
+            modal2.style.display = "none";
         }
     }
 </script>

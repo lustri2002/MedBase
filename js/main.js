@@ -37,7 +37,7 @@ function RicercaPaziente(){
                         <td class='table_content' style='border-right: 2px solid #150C25'>${Data[3]}</td>
                     </tr>
                     <tr>
-                        <td class='table_content' style='border-left: 2px solid #150C25; text-align: left'><b>Nel reparto di</b></td>
+                        <td class='table_content' style='border-left: 2px solid #150C25; text-align: left'><b>Nel  reparto di</b></td>
                         <td class='table_content' style='border-right: 2px solid #150C25'>${Data[4]}</td>
                     </tr>
                 </table>
@@ -63,11 +63,15 @@ function DimissionePaziente(){
         },
         success: (response) => {
             let HTML;
-            if(response == "success"){
+            if(response === "success"){
                 HTML = '<p style="margin: 1rem">Paziente dimesso</p>';
             }
-            else if(response == "fail"){
+            else if(response === "fail"){
                 HTML = '<p style="margin: 1rem">Errore, il paziente protrebbe essere stato già dimesso</p>';
+            }
+            else if(response === "not_allowed"){
+                alert('Non concesso');
+                window.location.href='../index.php';
             }
             $("#SchedaPaziente").html(HTML);
         }
@@ -116,10 +120,16 @@ function UpdatePrivilegi(Privilegio, idP){
         },
         success: (response) => {
             if (response === "success"){
-                alert("Aggiornamento riuscito")
+                alert("Aggiornamento riuscito");
+                window.location.reload();
             }
             else if (response ==="failed"){
-                alert("Errore nell'aggiornamento")
+                alert("Errore nell'aggiornamento");
+                window.location.reload();
+            }
+            else if(response === "not_allowed"){
+                alert('Non consentito');
+                window.location.href='../index.php';
             }
         }
     });
@@ -206,6 +216,9 @@ function RimuoviReparto(idR, MaxPosti, PostiOccupati){
             }
             else if(response === "success")
                 window.location.reload();
+            else if(response === "impossible")
+                alert("Il  reparto è stato occupato in precedenza, non è possibile rimuoverlo. \n" +
+                    "Si consiglia di impostare i posti letti a 0");
         }
     });
 }
@@ -246,4 +259,6 @@ function ListaPazienti(idR){
         }
     });
 }
+
+
 

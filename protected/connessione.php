@@ -3,7 +3,7 @@
 define('NOMEDATABASE', 'medbase');
 define('SERVERDATABASE', 'localhost');
 define('USERNAME', 'root');
-define('PASSWORD', '');
+define('PASSWORD', '19022002');
 
 $con = @ new mysqli (SERVERDATABASE, USERNAME, PASSWORD);
 
@@ -19,15 +19,19 @@ function CheckReparti($idR){
     $sql="SELECT MaxPosti-PostiOccupati As PostiLiberi
           FROM (
                 (select count(*) as PostiOccupati from degenza where DataOut is null and idR=$idR) AS PostiOccupati,
-                (select MaxPosti from reparto where idR = $idR ) AS MaxPosti
+                (select MaxPosti from  reparto where idR = $idR ) AS MaxPosti
                )";
     $Result = mysqli_query($con, $sql);
     $PostiLiberi = $Result->fetch_object()->PostiLiberi;
     return $PostiLiberi > 0;
 }
 
-function alert($msg){
-    echo "<script type='text/javascript'>alert('$msg');</script>";
+function alert($msg, $path){
+    echo "
+    <script type='text/javascript'>
+        alert('$msg');
+        window.location.href='$path';
+    </script>";
 }
 
 function CheckDegenza($idA){ //VERIFICA CHE IL PAZIENTE NON SIA GIà RICOVERATO IN QUEL REPARTO

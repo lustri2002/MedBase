@@ -21,7 +21,7 @@ session_start();
 <nav class="navbar navbar-expand-lg navbar-dark primary-color" style="background-color: #4C258F">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#" style="max-width: 200px; margin: 0; padding: 0; margin-right: 32px">
+    <a class="navbar-brand" href="../index.php" style="max-width: 200px; margin: 0; padding: 0; margin-right: 32px">
         <img class="logo" src="../img/mb.png" style="max-width: 100%" >
     </a>
 
@@ -39,15 +39,7 @@ session_start();
             <li class="nav-item active">
                 <a class="nav-link" href="../index.php">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Ospedali</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Dati</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
+
 
         </ul>
         <!-- Links -->
@@ -64,19 +56,22 @@ session_start();
                                           </button>
                                           <div class="dropdown-menu dropdown-menu-right">';
                     if(($_SESSION['utente']->privilegio & 1) > 0)
-                        echo '<a class="dropdown-item dropitem" href="../Statistiche.php">Statistiche - (1)</a>';
+                        echo '<a class="dropdown-item dropitem" href="../Statistiche.php">Statistiche</a>';
                     if(($_SESSION['utente']->privilegio & 2) > 0)
-                        echo '<a class="dropdown-item dropitem" href="../InserimentoPazienti.php">Inserimento paziente - (2)</a>';
+                        echo '<a class="dropdown-item dropitem" href="../InserimentoPazienti.php">Inserimento paziente</a>';
                     if(($_SESSION['utente']->privilegio & 4) > 0)
-                        echo '<a class="dropdown-item dropitem" href="../DimissionePazienti.php">Dimissione paziente - (4)</a>';
+                        echo '<a class="dropdown-item dropitem" href="../DimissionePazienti.php">Dimissione paziente</a>';
                     if(($_SESSION['utente']->privilegio & 8) > 0)
-                        echo '<a class="dropdown-item dropitem" href="../GestioneReparti.php">Gestione reparti - (8)</a>';
+                        echo '<a class="dropdown-item dropitem" href="../GestioneReparti.php">Gestione reparti</a>';
                     if(($_SESSION['utente']->privilegio & 16) > 0)
-                        echo '<a class="dropdown-item dropitem" href="../GestioneUtenti.php">Gestione utenti - (16)</a>';
-                    echo '<div class="dropdown-divider"></div>
-                                              <a class="dropdown-item logout_item" href="logout.php" style="color: #B32100">Log-out</a>
-                                          </div>
-                                       </div>';
+                        echo '<a class="dropdown-item dropitem" href="../GestioneUtenti.php">Gestione utenti</a>';
+                    echo '
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item dropitem" onclick="document.getElementById(\'PasswordRecovery\').style.display=\'block\'">Modifica password</a>
+                                                <div class="dropdown-divider"></div>                                                        
+                                                <a class="dropdown-item logout_item" href="functions/logout.php" style="color: #B32100">Log-out</a>
+                                      </div>
+                                   </div>';
                 }
                 else
                     echo '<button class="nav-link login_button" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="">Login</button>';
@@ -89,10 +84,10 @@ session_start();
 <!--/.Navbar-->
 <?php
     $user     = $_POST["uname"];
-    $password = $_POST["psw"];
+    $password = hash("sha512",$_POST["psw"]);
 
     require "../protected/connessione.php";
-    $sql = "select * from PERSONALE where username='$user' AND password='$password'";
+    $sql = "select * from personale  where username='$user' AND password='$password'";
     $result = mysqli_query($con,$sql);
     $num_righe = mysqli_num_rows($result);
     if($num_righe==1){
@@ -116,17 +111,17 @@ session_start();
 
         <div class="container">
             <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" id="username" required>
+            <input type="text" placeholder="Inserisci Username" name="uname" id="username" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+            <input type="password" placeholder="Inserisci Password" name="psw" id="password" required>
 
             <button type="submit">Login</button>
         </div>
 
         <div class="container" style="background-color:#1C1F1F">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+
         </div>
     </form>
 </div>
@@ -150,7 +145,7 @@ session_start();
 
         <div class="container" style="background-color:#1C1F1F">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+
         </div>
     </form>
 </div>
