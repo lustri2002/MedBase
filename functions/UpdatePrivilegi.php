@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if((($_SESSION['utente']->privilegio & 16) <= 0) or !isset($_SESSION['utente']))
+    if((($_SESSION['utente_Medbase']->privilegio & 16) <= 0) or !isset($_SESSION['utente_Medbase']))
         echo "not_allowed";
     else{
         $Privilegio = $_POST['Privilegio'];

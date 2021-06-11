@@ -1,7 +1,17 @@
 <?php
+
+    /*
+     * lo script prende tutti i parametri dategli dal personale che l'ha
+     * inserito, poi va a verificare se quel codice fiscale esiste già
+     * all'interno del database, se si prende l'id altrimenti lo aggiunge.
+     * Successivamente va a verificare la disponibilità nel reparto e
+     * controlla che il paziente non sia già ricoverato presso
+     * un altro reparto, e in caso sia possibile va a creare una nuova degenza,
+     * altrimenti va a creare una nuova degenza.
+    */
     require "../protected/connessione.php";
     session_start();
-    if(!(isset($_SESSION['utente'])) or (($_SESSION['utente']->privilegio & 2) == 0)){
+    if(!(isset($_SESSION['utente_Medbase'])) or (($_SESSION['utente_Medbase']->privilegio & 2) == 0)){
         alert('Non consentito','../index.php');
         die();
     }

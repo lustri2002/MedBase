@@ -55,21 +55,21 @@ session_start();
                 if(count($_SESSION) != 0){
                     echo '<div class="btn-group">
                               <button type="button" class="btn login_button">
-                              '. $_SESSION['utente']->username .'
+                              '. $_SESSION['utente_Medbase']->username .'
                               </button>
                               <button type="button" class="btn dropdown-toggle dropdown-toggle-split login_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only"></span>
                               </button>
                               <div class="dropdown-menu dropdown-menu-right">';
-                                    if(($_SESSION['utente']->privilegio & 1) > 0)
+                                    if(($_SESSION['utente_Medbase']->privilegio & 1) > 0)
                                         echo '<a class="dropdown-item dropitem" href="Statistiche.php">Statistiche</a>';
-                                    if(($_SESSION['utente']->privilegio & 2) > 0)
+                                    if(($_SESSION['utente_Medbase']->privilegio & 2) > 0)
                                         echo '<a class="dropdown-item dropitem" href="InserimentoPazienti.php">Inserimento paziente</a>';
-                                    if(($_SESSION['utente']->privilegio & 4) > 0)
+                                    if(($_SESSION['utente_Medbase']->privilegio & 4) > 0)
                                         echo '<a class="dropdown-item dropitem" href="DimissionePazienti.php">Dimissione paziente</a>';
-                                    if(($_SESSION['utente']->privilegio & 8) > 0)
+                                    if(($_SESSION['utente_Medbase']->privilegio & 8) > 0)
                                         echo '<a class="dropdown-item dropitem" href="GestioneReparti.php">Gestione reparti</a>';
-                                    if(($_SESSION['utente']->privilegio & 16) > 0)
+                                    if(($_SESSION['utente_Medbase']->privilegio & 16) > 0)
                                         echo '<a class="dropdown-item dropitem" href="GestioneUtenti.php">Gestione utenti</a>';
                                     echo '
                                                 <div class="dropdown-divider"></div>
@@ -90,7 +90,7 @@ session_start();
 <!--/.Navbar-->
 <?php
 require "protected/connessione.php";
-    if(count($_SESSION) && ($_SESSION['utente']->privilegio & 16) > 0){
+    if(count($_SESSION) && ($_SESSION['utente_Medbase']->privilegio & 16) > 0){
         echo "  <div class='row'>
                     <div class='col-1'></div>
                     <div class='col-10' style='text-align: center'>
@@ -105,9 +105,9 @@ require "protected/connessione.php";
                                     <td class='table_header' style='text-align: center'>Receptionst</td>
                                     <td class='table_header' style='text-align: center'>Medico</td>
                                     <td class='table_header' style='text-align: center'>Direttore</td>
-                                    <td class='table_header' style='text-align: center'>Amministratore</td>                                    
+                                    <td class='table_header' style='text-align: center'>Gestore personale</td>                                    
                                 </tr>";
-                                $IdUtente = $_SESSION['utente']->idP;
+                                $IdUtente = $_SESSION['utente_Medbase']->idP;
                                 $sql = "select * from personale  where idP != $IdUtente";
                                 $Result = mysqli_query($con, $sql);
                                 while($row = $Result->fetch_object()){
@@ -198,7 +198,7 @@ require "protected/connessione.php";
                                         <td class='table_header' style='text-align: center'>Receptionst</td>
                                         <td class='table_header' style='text-align: center'>Medico</td>
                                         <td class='table_header' style='text-align: center'>Direttore</td>
-                                        <td class='table_header' style='border: 2px solid #150C25; text-align: center'>Amministratore</td>                                    
+                                        <td class='table_header' style='border: 2px solid #150C25; text-align: center'>Gestore personale</td>                                    
                                     </tr>
                                     <tr>
                                         <td class='table_content' style='border-left: 2px solid #150C25; text-align: center'>

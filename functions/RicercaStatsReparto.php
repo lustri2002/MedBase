@@ -5,7 +5,7 @@
     $sql = "select count(*) as PostiOccupati from degenza where DataOut is null and idR=$idR";
     $PostiOccupati = mysqli_query($con, $sql)->fetch_object()->PostiOccupati;
 
-    $sql = "select NomeR, MaxPosti from reparto";
+    $sql = "select NomeR, MaxPosti from reparto where idR = $idR";
     $Result=mysqli_query($con, $sql)->fetch_object();
     $nomeR = $Result->NomeR;
     $MaxPosti = $Result -> MaxPosti;

@@ -64,10 +64,10 @@ function DimissionePaziente(){
         success: (response) => {
             let HTML;
             if(response === "success"){
-                HTML = '<p style="margin: 1rem">Paziente dimesso</p>';
+                HTML = '<p style="margin: 1rem; color: white">Paziente dimesso</p>';
             }
             else if(response === "fail"){
-                HTML = '<p style="margin: 1rem">Errore, il paziente protrebbe essere stato già dimesso</p>';
+                HTML = '<p style="margin: 1rem; color: white">Errore, il paziente protrebbe essere stato già dimesso</p>';
             }
             else if(response === "not_allowed"){
                 alert('Non concesso');

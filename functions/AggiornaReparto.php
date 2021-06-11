@@ -1,7 +1,12 @@
 <?php
+/*------------------------------------------------------
+    Funzione che va ad aggiorare l'attributo MaxPosti
+    della tabella Reparti prendendone l'Id dall'array
+    POST.
+------------------------------------------------------*/
     require "../protected/connessione.php";
     session_start();
-    if(!(isset($_SESSION['utente'])) or (($_SESSION['utente']->privilegio & 8) == 0)){
+    if(!(isset($_SESSION['utente_Medbase'])) or (($_SESSION['utente_Medbase']->privilegio & 8) == 0)){
         alert('Non consentito','../index.php');
         die();
     }

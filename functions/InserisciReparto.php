@@ -1,8 +1,11 @@
 <?php
-
+    /*
+     * Inserimento del nuovo reparto, previa verifica che non esista già
+     * un reparto con quello stesso nome.
+    */
     require "../protected/connessione.php";
     session_start();
-    if(!(isset($_SESSION['utente'])) or (($_SESSION['utente']->privilegio & 8) == 0)){
+    if(!(isset($_SESSION['utente_Medbase'])) or (($_SESSION['utente_Medbase']->privilegio & 8) == 0)){
         alert('Non consentito','../index.php');
         die();
     }

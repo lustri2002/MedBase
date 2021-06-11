@@ -1,4 +1,7 @@
 <?php
+    /*
+     * Produce una lista di tutti i pazienti ricoverati in un singolo reparto
+     */
     $idR = $_POST["idR"];
     require "../protected/connessione.php";
 

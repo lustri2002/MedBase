@@ -1,3 +1,15 @@
+<!--
+    La pagina verifica se i dati inseriti siano corretti, in tal caso
+    crea una variabile di sessione 'utente'
+-->
+<?php
+    if(count($_SESSION)>0){
+        session_start();
+        session_unset();
+        session_destroy();
+    }
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,9 +26,6 @@
     <link rel="icon" href="../img/mb.png">
 </head>
 <body>
-<?php
-session_start();
-?>
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark primary-color" style="background-color: #4C258F">
 
@@ -49,27 +58,27 @@ session_start();
                 if(count($_SESSION) != 0){
                     echo '<div class="btn-group">
                                           <button type="button" class="btn login_button">
-                                          '. $_SESSION['utente']->username .'
+                                          '. $_SESSION['utente_Medbase']->username .'
                                           </button>
                                           <button type="button" class="btn dropdown-toggle dropdown-toggle-split login_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class="sr-only"></span>
                                           </button>
                                           <div class="dropdown-menu dropdown-menu-right">';
-                    if(($_SESSION['utente']->privilegio & 1) > 0)
+                    if(($_SESSION['utente_Medbase']->privilegio & 1) > 0)
                         echo '<a class="dropdown-item dropitem" href="../Statistiche.php">Statistiche</a>';
-                    if(($_SESSION['utente']->privilegio & 2) > 0)
+                    if(($_SESSION['utente_Medbase']->privilegio & 2) > 0)
                         echo '<a class="dropdown-item dropitem" href="../InserimentoPazienti.php">Inserimento paziente</a>';
-                    if(($_SESSION['utente']->privilegio & 4) > 0)
+                    if(($_SESSION['utente_Medbase']->privilegio & 4) > 0)
                         echo '<a class="dropdown-item dropitem" href="../DimissionePazienti.php">Dimissione paziente</a>';
-                    if(($_SESSION['utente']->privilegio & 8) > 0)
+                    if(($_SESSION['utente_Medbase']->privilegio & 8) > 0)
                         echo '<a class="dropdown-item dropitem" href="../GestioneReparti.php">Gestione reparti</a>';
-                    if(($_SESSION['utente']->privilegio & 16) > 0)
+                    if(($_SESSION['utente_Medbase']->privilegio & 16) > 0)
                         echo '<a class="dropdown-item dropitem" href="../GestioneUtenti.php">Gestione utenti</a>';
                     echo '
                                                 <div class="dropdown-divider"></div>
                                                 <a class="dropdown-item dropitem" onclick="document.getElementById(\'PasswordRecovery\').style.display=\'block\'">Modifica password</a>
                                                 <div class="dropdown-divider"></div>                                                        
-                                                <a class="dropdown-item logout_item" href="functions/logout.php" style="color: #B32100">Log-out</a>
+                                                <a class="dropdown-item logout_item" href="logout.php" style="color: #B32100">Log-out</a>
                                       </div>
                                    </div>';
                 }
@@ -91,14 +100,13 @@ session_start();
     $result = mysqli_query($con,$sql);
     $num_righe = mysqli_num_rows($result);
     if($num_righe==1){
-        session_start();
-        $_SESSION['utente'] = $result->fetch_object();
+        $_SESSION['utente_Medbase'] = $result->fetch_object();
         header("Location:../index.php");
     }
     else if ($num_righe<1)
         echo "
                      <div class='login_error_box'>  
-                        <p class='login_error'>Login non riuscito, <br>
+                        <p style='color: white'>Login non riuscito, <br>
                         Controlla le credenziali</p>
                      </div>"
     ?>

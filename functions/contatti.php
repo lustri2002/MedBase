@@ -1,5 +1,7 @@
 <?php
-
+    /*
+     File standard di PHPMailer che permette l'invio della mail prendendo i parametri dal form.
+    */
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;

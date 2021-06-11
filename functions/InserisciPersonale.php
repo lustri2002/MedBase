@@ -1,7 +1,13 @@
 <?php
+    /*
+    * Il codice in questione prende i dati dal form, e per il privilegio esegue
+    * una somma di tutti i privilegi impostati.
+    * Una volta verificato che sia username e password siano uguali per tutti i campi
+    * allora si procedere all'inserimento.
+    */
     require "../protected/connessione.php";
     session_start();
-    if(!(isset($_SESSION['utente'])) or (($_SESSION['utente']->privilegio & 16) == 0)){
+    if(!(isset($_SESSION['utente_Medbase'])) or (($_SESSION['utente_Medbase']->privilegio & 16) == 0)){
         alert('Non consentito','../index.php');
         die();
     }
