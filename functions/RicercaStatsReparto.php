@@ -12,4 +12,5 @@
 
     $MediaRicovero = CalcolaMedia($idR);
     if($MediaRicovero==0) $MediaRicovero="Dati mancanti";
+    else $MediaRicovero = number_format((float)$MediaRicovero, 2, '.', '');
     echo "$nomeR; $MaxPosti; $PostiOccupati; $MediaRicovero";

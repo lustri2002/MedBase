@@ -60,7 +60,7 @@
                                           <button type="button" class="btn dropdown-toggle dropdown-toggle-split login_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class="sr-only"></span>
                                           </button>
-                                          <div class="dropdown-menu dropdown-menu-right">';
+                                          <div class="dropdown-menu dropdown-menu-right"  style="min-width: 13rem">';
                         if(($_SESSION['utente_Medbase']->privilegio & 1) > 0)
                             echo '<a class="dropdown-item dropitem" href="Statistiche.php">Statistiche</a>';
                         if(($_SESSION['utente_Medbase']->privilegio & 2) > 0)
@@ -102,9 +102,9 @@
                         <input type='text' name='cognomePaziente' placeholder='Cognome del paziente' style='width: 40%' required>
                      </div>
                      <div>
-                        <input type='text' name='CF' placeholder='Codice fiscale' style='width: 40%' required>
+                        <input type='text' name='CF' pattern='[a-zA-Z0-9]{16}' placeholder='Codice fiscale' style='width: 40%' required>
                         <select class='select_box' name='nomeR' style='width: 40%' required>
-                            <option value='0' disabled selected>Seleziona reparto</option>";
+                            <option value='' disabled selected>Seleziona reparto</option>";
                             $sql="SELECT NomeR, idR From reparto";
                             $listaReparti = mysqli_query($con, $sql);
                             while ($row = $listaReparti->fetch_object()){

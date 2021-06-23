@@ -61,7 +61,7 @@ session_start();
                               <button type="button" class="btn dropdown-toggle dropdown-toggle-split login_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only"></span>
                               </button>
-                              <div class="dropdown-menu dropdown-menu-right">';
+                              <div class="dropdown-menu dropdown-menu-right"  style="min-width: 13rem">';
                                     if(($_SESSION['utente_Medbase']->privilegio & 1) > 0)
                                         echo '<a class="dropdown-item dropitem" href="Statistiche.php">Statistiche</a>';
                                     if(($_SESSION['utente_Medbase']->privilegio & 2) > 0)
@@ -98,7 +98,7 @@ require "protected/connessione.php";
                         <div class='box example' style='width: 100%'>
                             <h3 style='padding-top: 15px'>Statische reparto</h3>
                             <select id='Reparto' required class='select_box' style='padding: 11px; width: 80%' name='idR'>
-                                <option value='0' disabled selected>Seleziona reparto</option>";
+                                <option value='' disabled selected>Seleziona reparto</option>";
                                 $Result = mysqli_query($con, "SELECT idR, NomeR FROM reparto");
                                 while ($row = $Result->fetch_object()){
                                     echo "<option value='$row->idR'>$row->NomeR</option>";

@@ -60,7 +60,7 @@ session_start();
                               <button type="button" class="btn dropdown-toggle dropdown-toggle-split login_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only"></span>
                               </button>
-                              <div class="dropdown-menu dropdown-menu-right">';
+                              <div class="dropdown-menu dropdown-menu-right"  style="min-width: 13rem">';
                                     if(($_SESSION['utente_Medbase']->privilegio & 1) > 0)
                                         echo '<a class="dropdown-item dropitem" href="Statistiche.php">Statistiche</a>';
                                     if(($_SESSION['utente_Medbase']->privilegio & 2) > 0)
